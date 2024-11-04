@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0C1C;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 75vh;
+    width: 75vw;
+    background-color: #1B1937;
+    border-radius: 2vmin;
+    overflow: hidden;
+}
+
+main > .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 0 10vmin 0 10vmin;
+    height: 100%;
+}
+
+.purple {
+    color: #AB5CDB;
+}
+
+main div.image {
+    background-color: #AB5CDB;
+    background-image: url("assets/miage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 50%;
+    height: 100%;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.realcontent *:first-child {
+    margin-bottom: 4vmin;
+}
+
+p {
+    font-weight: lighter;
+}
+
+@media(width < 800px) {
+    main, .content, .realcontent, .stats {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+    main {
+        text-align: center;
+    }
+    .image {
+        width: 100% !important;
+    }
+    .content {
+        width: 100% !important;
+        margin: 2vmin;
+    }
+    .realcontent {
+        margin-bottom: 2vmin;
+    }
+    .stats > div:not(.stats > div:last-child) {
+        margin-bottom: 2vmin;
+    }
+}
